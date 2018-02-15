@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-export class Layout extends Component{
+export default class Layout extends Component{
   render(){
     const {title} = this.props
     return(

@@ -43,7 +43,7 @@ export default class Layout extends Component{
     const {title} = this.props
     return(
       <div className="container">
-        {title}
+        <LoginForm socket={socket} setUser={this.setUser} />
       </div>
     );
   }

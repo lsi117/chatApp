@@ -13,12 +13,12 @@ export default class LoginForm extends Component{
   render(){
     const {nickname, error} = this.state
     return(
-        <div className="Login">
+        <div className="login">
           <form onSubmit={this.handleSubmit} className="login-form">
             <label htmlFor="nickname">
               <h2>Do you have a nickname?</h2>
             </label>
-            <input ref={(input)=>{this.textInput = input}} type="text" id="nickname" value={nickname} onChange={this.handleChange} placeHolder={'CoolUSERname'} />
+            <input ref={(input)=>{this.textInput = input}} type="text" id="nickname" value={nickname} onChange={this.handleChange} placeholderolder={'CoolUSERname'} />
             <div className="error">{error ? error:null }</div>
           </form>
         </div>

@@ -8,7 +8,8 @@ export default class Layout extends Component{
     super(props);
 
     this.state = {
-      socket:null
+      socket:null,
+      user:null
     };
   }
 
@@ -23,6 +24,12 @@ export default class Layout extends Component{
       console.log('Connected')
     })
     this.setState({socket})
+  }
+
+  setUser = (user)=>{
+    const {socket} = this.state
+    socket.emit(USER_CONNECTED);
+    this.setState({user})
   }
 
   render(){
